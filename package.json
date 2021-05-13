@@ -1,0 +1,38 @@
+{
+  "name": "shepherd-migration-example",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/azu/shepherd-migration-example",
+  "bugs": {
+    "url": "https://github.com/azu/shepherd-migration-example/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/shepherd-migration-example.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/shepherd-migration-example.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "checkout": "shepherd checkout",
+    "apply": "shepherd apply",
+    "commit": "shepherd commit",
+    "push": "shepherd commit",
+    "pr-preview": "shepherd pr-preview",
+    "pr": "shepherd pr",
+    "pr-status": "shepherd pr-status",
+    "list": "shepherd list"
+  },
+  "dependencies": {
+    "@nerdwallet/shepherd": "^1.14.1"
+  }
+}

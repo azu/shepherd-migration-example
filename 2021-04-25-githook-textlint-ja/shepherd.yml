@@ -1,0 +1,13 @@
+id: 2021.04.25-githook-textlint-ja
+title: Rename .githook to .githooks
+adapter:
+  type: github
+  search_type: code
+  search_query: org:textlint-ja path:/.githook
+hooks:
+  should_migrate:
+    - ls .githook
+  apply:
+    - mv .githook .githooks
+    - npe scripts.prepare "git config --local core.hooksPath .githooks"
+  pr_message: echo "Rename .githook to .githooks"
